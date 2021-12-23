@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jackie.paging3demo.ui.main.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_coroutinesFragment"
+            app:destination="@id/coroutinesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_rxFragment"
+            app:destination="@id/rxFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coroutinesFragment"
+        android:name="com.jackie.paging3demo.ui.coroutines.CoroutinesFragment"
+        android:label="fragment_coroutines"
+        tools:layout="@layout/fragment_coroutines" />
+    <fragment
+        android:id="@+id/rxFragment"
+        android:name="com.jackie.paging3demo.ui.rx.RxFragment"
+        android:label="fragment_rx"
+        tools:layout="@layout/fragment_rx" />
+</navigation>
